@@ -1,0 +1,36 @@
+<section class="homeintro">
+    <p><strong class="paragraph1">Start your journey with Us</strong></p>
+    <p class="paragraph2">Discover the world’s best community to help and develop your skills.</p>
+   <ng-template #registerbutton>
+    <!--display when no user is signed in-->
+    <button mat-stroked-button><a href="/register">Register</a></button>
+  </ng-template>
+  <span *ngIf="authService.userState$ | async as user ; else registerbutton">
+  <!--display when user signed in-->
+    <button mat-stroked-button  *ngIf="volunteerprofile.isLoggedInUserVolunteer$ | async as user; else companylink" >
+      <a href="/volunteer/allactivities">View Activities</a></button><!--volunteeraccount-->
+      <ng-template #companylink>
+    <button  mat-stroked-button *ngIf="companyprofile.isLoggedInUserCompany$ | async as user" >
+      <a href="/company/allvolunteers">View volunteers</a></button><!--companyaccount-->
+    </ng-template>
+    </span>
+    </section>
+
+ <!--<section class="activites">
+  
+        <p class="header">Activities</p>
+        grid card
+        <mat-card class="example-card">
+          <p class="date">date</p>
+          <mat-card-title>Activity name</mat-card-title>
+          <mat-card-subtitle>Company name</mat-card-subtitle>
+          <mat-card-content>
+            <p>Skills required</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-raised-button href="https://www.google.com/" target="_blank">Learn More</a>
+          </mat-card-actions>
+        </mat-card>
+        <br>
+    </section>
+  -->

@@ -1,0 +1,26 @@
+.header,.example-form {
+    color:#EAEBED;
+}
+.header{
+    margin: 20px;
+}
+
+mat-label{
+    color: #EAEBED;
+}
+.firststep{
+    color: #EAEBED;
+}
+
+ .mat-stroked-button{
+
+    background-color: #42B694;
+    border:0.1px solid #42B694;
+
+
+ }
+ mat-horizontal-stepper {
+    background-color: #161920;
+    color: #EAEBED;
+    
+ }

@@ -1,0 +1,24 @@
+<p class="header">login</p>
+<div class="form-container">
+<form [formGroup]="loginForm"  (ngSubmit)="submit()">
+    <mat-form-field  appearance="fill">
+      <mat-label>Email Address</mat-label>
+      <input matInput type="text" formControlName="email">
+     <mat-error *ngIf ="email?.errors?.['required']">Email is required</mat-error>
+     <mat-error *ngIf ="email?.errors?.['email']">Email format is incorrect</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="password"  formControlName="password">
+        <mat-error *ngIf ="password?.errors?.['required']">Password is required</mat-error>
+        <mat-error *ngIf ="password?.errors?.['minlength']">Password must be at least 6 charecters</mat-error>
+      </mat-form-field>
+      <p > New user? <span class="register" (click)="register()">Register now</span>  </p>
+      <mat-error *ngIf ="formStatus">
+        {{formStatus}}
+      </mat-error>
+  
+      <button type="submit" mat-stroked-button>Login</button>
+  </form>
+</div>

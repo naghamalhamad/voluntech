@@ -1,0 +1,18 @@
+mat-form-feld, h2,mat-label{
+    color:#EAEBED;
+}
+.mat-stroked-button{
+    position: relative;
+    top: 10%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) ;
+    border:0.1px solid #42B694;
+    margin: 10px;
+    color: #42B694;
+
+ }
+ h2{
+    margin: 20px;
+    margin-left: 60px;
+ }

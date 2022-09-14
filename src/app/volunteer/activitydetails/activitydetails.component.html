@@ -1,0 +1,46 @@
+<mat-grid-list cols="2" rowHeight="1:1"  *ngFor="let Activity of activities" >
+    <mat-grid-tile>
+<section class="detail">
+    <p class="name"><strong>{{Activity.activityName}}</strong> By {{Activity.companyName}}</p>
+    <p class="description"> {{Activity.description}</p>
+    <p class="type">{{Activity.type}} </p>
+    <p class="date">{{Activity.range.start}}</p>
+    <p class="date">{{Activity.range.end}}</p>
+    
+      <a mat-raised-button href="/volunteer/apply" target="_blank">apply</a>
+        
+</section>
+</mat-grid-tile>
+<mat-grid-tile >
+    <section class="candidates">
+        <h1>Candidates</h1>
+       <img src="assets/images/profileimg.jpg" alt="candidate"> candidate1
+       <a mat-raised-button href="https://www.google.com/" target="_blank">visit</a>
+       <br>
+       <img src="assets/images/profileimg.jpg" alt="candidate"> candidate2
+       <a mat-raised-button href="volunteer/volunteerdetails" target="_blank">visit</a>
+
+    </section>
+</mat-grid-tile>
+
+
+<!-- 
+<section class="about" *ngFor="let Activity of activities" >
+    <div > 
+    <p class="headline"></p>
+    <p class="Company Name">{{Activity.companyName}}</p>
+    <p class="date">{{Activity.range.start}}</p>
+    <p class="date">{{Activity.range.end}}</p>
+    <p class="discription">{{Activity.decription}}</p>
+   
+    <p class="headline">Skills</p>
+    <div class="skills">
+        <ul>we can use ngfor
+            <li class="skill">skill1</li>
+        </ul>
+       
+        </div> 
+    </div>
+    
+</section>
+-->

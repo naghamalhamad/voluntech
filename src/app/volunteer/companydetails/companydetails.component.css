@@ -1,0 +1,38 @@
+.activities{
+    position: absolute;
+    left: 30%;
+    top: 170px;
+    width: 30%;
+    color:#EAEBED;
+}
+
+mat-card-title{
+    font-size: 16px;
+}
+mat-card-subtitle{
+    color: #000000;
+    font-size: 14px;
+}
+.about{
+    position: absolute;
+    left: 30%;
+    top: 170px;
+    width: 60%;
+    color:#EAEBED;
+  
+  }
+  .headline{
+      font-size: 16px;
+      margin-top: 25px;
+  }
+  .experiences{
+   margin: 20px;
+  
+  }
+  ul{
+      width: 25%;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      
+  }

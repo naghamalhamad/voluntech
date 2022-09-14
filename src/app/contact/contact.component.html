@@ -1,0 +1,19 @@
+<h2 class="header">Contact Us</h2>
+<div class="form-container">
+<form [formGroup]="contactForm"  (ngSubmit)="send()">
+    <mat-form-field appearance="fill">
+        <mat-label>Your Name</mat-label>
+        <input matInput type="text" formControlName="name">
+      </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email Address</mat-label>
+      <input matInput type="text" formControlName="email">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Message</mat-label>
+        <textarea matInput type="password"  formControlName="message"></textarea>
+      </mat-form-field>
+      <button type="submit" mat-stroked-button>Send</button>
+  </form>
+</div>

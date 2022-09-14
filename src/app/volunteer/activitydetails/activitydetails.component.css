@@ -1,0 +1,26 @@
+.detail{
+    margin: 30px;
+     color:#EAEBED;
+   
+   }
+   .name{
+       font-size: 16px;
+  
+   }
+ 
+   ul{
+       width: 25%;
+       list-style: none;
+       display: flex;
+    
+   }
+   img{
+     width: 30px;
+     margin: 10px;
+   }
+  
+   .candidates{
+     color: #EAEBED;
+   }
+ 
+   

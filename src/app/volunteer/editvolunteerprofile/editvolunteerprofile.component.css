@@ -1,0 +1,70 @@
+.header,.example-form {
+    color: #EAEBED;
+ }
+ .header{
+    margin: 20px;
+ }
+ 
+ mat-label,input{
+    color: #EAEBED;
+ }
+ 
+ .mat-stroked-button{
+   position: relative;
+    top: 10%;
+    left: 45%;
+ 
+    color: #42B694;
+    border:0.1px solid #42B694;
+    margin-top: 20px;
+ 
+ 
+ }
+ .example-full-width,.example-chip-list{
+    width: 600px; 
+    margin-left:25% ;
+    margin-right:25%;
+ 
+ 
+ } 
+ .example-form{
+    position: absolute;
+    width: 400px;
+    height: 101px;
+    left: 27%;
+    top: 150px;
+ }
+ 
+ 
+ mat-horizontal-stepper {
+    background-color: #161920;
+    color: #EAEBED;
+    
+ }
+ 
+ mat-icon{
+    width: 16px;
+ }
+ 
+ .mat-step{
+    width:50%;
+ }
+ .one{
+   width: 300px;
+  
+ }
+ .form-container{
+    max-width: 500px;
+    margin: auto;
+ }
+ .form-container mat-form-field{
+    width: 100%;
+    margin: 10px 0px;
+    margin-top: 40px;
+ }
+ 
+ .courses,.JobExperiences{
+    margin-left:25%;
+    margin-right:25%;
+ 
+ }

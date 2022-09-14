@@ -1,0 +1,16 @@
+.form-container, h2, mat-hint,mat-label{
+    color: #EAEBED;
+}
+
+.mat-stroked-button{
+
+    color: #42B694;
+    border:0.1px solid #42B694;
+  
+
+
+ }
+ h2{
+    margin: 20px;
+    margin-left: 60px;
+ }

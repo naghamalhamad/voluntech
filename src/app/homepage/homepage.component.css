@@ -1,0 +1,63 @@
+
+.homeintro{
+    position: relative;
+    width: 450px;
+    left: 114px;
+    top: 160px;
+    color: #EAEBED;
+    
+    }
+    .paragraph1{
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 20px;
+    
+    }
+    .paragraph2{
+        font-size: 18px;
+        
+    }
+    
+    
+    .example-card {
+        max-width: 25%;
+        height: 120px;
+        margin-bottom: 20px;
+        margin: 20px;
+      }
+     .header{
+        font-size: 20px;
+        color: #EAEBED;
+        margin: 50px;
+    
+    
+     }
+      .mat-raised-button{
+        width: 70px;
+        position: absolute;
+        font-size: 12px;
+        left: 70%;
+        bottom: 10%;
+    
+      }
+      .mat-card-title{
+        font-size: 16px;
+    
+      }
+      .activites{
+        margin: 20px;
+      }
+      .mat-stroked-button{
+        position: relative;
+        left: 61%;
+        top: 40px;
+        color: #42B694;
+        border:0.1px solid #42B694;
+      
+    
+    
+     }
+     a{
+      text-decoration: none;
+      color: #42B694;
+     }

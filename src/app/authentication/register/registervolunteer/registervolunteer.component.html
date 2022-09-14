@@ -1,0 +1,133 @@
+<mat-horizontal-stepper [formGroup]="volunteerForm" (ngSubmit)="submit()">
+    <mat-step class="personalinfo" label="personal info">
+      <div class="form-container" >
+        <form>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Full Name</mat-label>
+                <input matInput type="text" formControlName="fullName">
+              </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email Address</mat-label>
+              <input matInput type="email" formControlName="email">
+              <mat-error *ngIf ="email?.errors?.['required']">Email is required</mat-error>
+              <mat-error *ngIf ="email?.errors?.['email']">Email format is incorrect</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName="password">
+                <mat-error *ngIf ="password?.errors?.['required']">Password is required</mat-error>
+                <mat-error *ngIf ="password?.errors?.['minlength']">Password must be at least 6 charecters</mat-error>
+              </mat-form-field>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput type="password" formControlName="confirmPassword">
+              </mat-form-field>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Phone Number</mat-label>
+                <input matInput type="number" formControlName="phoneNumber">
+              </mat-form-field>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>City</mat-label>
+                <input matInput type="text" formControlName="city">
+              </mat-form-field>
+        
+        <br>
+        <button *ngIf="volunteerForm" mat-stroked-button matStepperNext>Next</button>
+    </form>
+  </div>
+  </mat-step>
+  
+  <mat-step>
+    <div class="form-container" (ngSubmit)="submit()">
+      
+    <form >
+      <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Current position</mat-label>
+      <input matInput type="text" formControlName="currentposition">
+    </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>About</mat-label>
+        <input matInput  >
+      </mat-form-field>
+      <!--skills chips-->
+      <mat-form-field class="example-chip-list" appearance="fill">
+        <mat-label>Add Skill</mat-label>
+        <input type="text" formControlName="skills" placeholder="New skill..." 
+        [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        [matChipInputAddOnBlur]="addOnBlur"
+        (matChipInputTokenEnd)="add($event)" formControlName="about">
+        <mat-chip-list #chipList aria-label="skill selection">
+          <mat-chip *ngFor="let skill of skills" (removed)="remove(skill)">
+            {{skill}}
+            <button matChipRemove>
+              <mat-icon><img src="assets/images/cancle.svg" alt="cancle"></mat-icon>
+            </button>
+          </mat-chip>
+         
+        </mat-chip-list>
+      </mat-form-field>
+   
+      <!--JobExperiences
+      "-->
+      <div class="JobExperience"  >
+      <p>Job Experiences</p>
+  
+      <mat-form-field class="one" appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput type="text" formControlName="jobTitle">
+      </mat-form-field>
+  
+      <mat-form-field class="one" appearance="fill">
+          <mat-label>Company Name</mat-label>
+          <input matInput type="text" formControlName="companyName">
+        </mat-form-field>
+  
+        <mat-form-field class="one" appearance="fill">
+          <mat-label>Date</mat-label>
+          <input matInput type="date" formControlName="jobDate">
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Discription</mat-label>
+          <textarea  matInput type="textarea" formControlName="jobDiscription"></textarea>
+        </mat-form-field>
+         <button mat-icon-button >plus_one</button>
+  
+  </div>
+   
+      <!--courses
+      "-->
+      <div class="course" >
+      <p>Courses</p>
+        <mat-form-field class="one" appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput type="text" formControlName="courseTitle">
+        </mat-form-field>
+  
+        <mat-form-field class="one" appearance="fill">
+            <mat-label>Course Name</mat-label>
+            <input matInput type="text" formControlName="courseName">
+          </mat-form-field>
+  
+          <mat-form-field class="one" appearance="fill">
+            <mat-label>Date</mat-label>
+            <input matInput  type="date" formControlName="courseDate">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Discription</mat-label>
+            <textarea  matInput type="textarea" formControlName="courseDiscription"></textarea>
+          </mat-form-field>
+          <br>
+          <!--when click it will store the data in the firestore-->
+          <button type="submit" mat-stroked-button matStepperNext>Register</button>    
+            <!--plus icon-->
+       
+        </div>
+        </form>
+        </div>
+  
+  </mat-step>
+  </mat-horizontal-stepper>

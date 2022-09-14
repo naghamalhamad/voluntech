@@ -1,0 +1,42 @@
+.header,.example-form {
+    color: #161920;
+}
+.header{
+    margin: 20px;
+}
+
+mat-label{
+    color: #EAEBED;
+}
+.firststep{
+    color: #EAEBED;
+}
+ .example-form{
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 101px;
+    left: 290px;
+    top: 150px;
+ }
+ .example-full-width{
+    width: 600px;
+
+
+ }
+ .mat-stroked-button{
+    position: relative;
+    top: 10%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) ;
+    background-color: #42B694;
+    border:0.1px solid #42B694;
+    margin: 10px;
+
+ }
+ mat-horizontal-stepper {
+    background-color: #161920;
+    color: #EAEBED;
+    
+ }

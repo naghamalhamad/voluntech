@@ -1,0 +1,55 @@
+<section class="filter">
+    <mat-form-field class="example-full-width search" appearance="fill">
+        <mat-label class="searchicon"><img src ="assets/images/search.svg"> </mat-label>
+        <input matInput>
+      </mat-form-field>
+ 
+     <mat-form-field class="selector" appearance="fill">
+       <mat-label class="cityselector">City</mat-label>
+        <mat-select>
+         <mat-option>Amman</mat-option>
+         <mat-option>Alzarqaa</mat-option>
+         <mat-option>Irbid</mat-option>
+         <mat-option>Aqaba</mat-option>
+        </mat-select>
+     </mat-form-field>
+
+     <mat-form-field class="selector" appearance="fill">
+        <mat-label class="skillsselector">Skills</mat-label>
+         <mat-select>
+          <mat-option value="HTML">HTML</mat-option>
+          <mat-option value="CSS">CSS</mat-option>
+          <mat-option value="JavaScript">JavaScript</mat-option>
+          <mat-option value="SQL">SQL</mat-option>
+          <mat-option value="JAVA">JAVA</mat-option>
+          <mat-option value="PHP">PHP</mat-option>
+        
+         </mat-select>
+      </mat-form-field>
+
+</section>
+<section class="posted">
+    <mat-grid-list cols="4" rowHeight="300px">
+    <mat-grid-tile  *ngFor="let volunteer of volunteers">
+    <mat-card class="example-card">
+    <mat-card-content class="content">
+        <a mat-button (click)="volunteerprofileimg()">
+            <!--  <img class="profileimg" [src]="user.photoURL?? 'assets/images/profileimg.jpg'" >  --></a>  
+        <ul>
+         
+    <li >
+    <p><strong>{{volunteer.fullName}} </strong></p>
+     <p class="city"> {{volunteer.city}}</p>
+     <p class="">{{volunteer.currentposition}}</p>
+
+        </li>
+        </ul>
+    </mat-card-content>
+
+    <mat-card-actions>
+    <a class="btn" mat-raised-button href ="/volunteer/profile{{volunteer.id}}/about" target="_blank">Visit</a>
+    </mat-card-actions>
+     </mat-card>
+     </mat-grid-tile>
+    </mat-grid-list>
+    </section>

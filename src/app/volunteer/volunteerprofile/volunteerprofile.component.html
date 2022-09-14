@@ -1,0 +1,55 @@
+<div class="container" >
+    <div class="card" *ngIf="volunteerprofile.userState$ | async as volunteer">
+      <button mat-mini-fab class="editpageicon" (click)="editpage()" target="_blank" ><mat-icon>edit</mat-icon></button>
+      <img class="profileimg"
+      [src]="volunteer.photoURL ?? 'assets/images/profileimg.jpg'"
+      alt="profile image"> 
+      <a class="editimgicon" (click)="inputfile.click()"><mat-icon class="editimg">edit</mat-icon></a>
+      <input type="file" #inputfile accept="image/*" hidden value="select image" (change)="submit($event)">
+      <span class="volunteerinfo">
+       <p ><strong>{{volunteer.fullName+' '}}</strong></p>
+       <p >{{volunteer.currentposition}}</p>
+       <p >{{volunteer.city}}</p>
+      </span>     
+      <div class="icons">
+        <img class="icon"src="assets/images/email.png" alt="email icon">
+        <img class="icon"src="assets/images/linkedin.png" alt="likedin icon">
+        <img class="icon"src="assets/images/github.png" alt="github icon">
+       </div>
+       <div class="aboutsection">
+        <a class="link"  (click)="aboutpage()">About</a>
+        <a class="link" (click)="activitiespage()">Volunteer Activities</a>
+       </div>
+   </div>
+   </div>
+   <section class="about" *ngIf="volunteerprofile.userState$ |async as volunteer">
+    <p class="aboutp">{{volunteer.about}}</p>
+
+
+    <div class="experiences">
+    <p class="headline">Work Experiences</p>
+        <ul>
+            <li class="jobtitle">{{volunteer.jobTitle}}</li>
+            <li class="Company Name">{{volunteer.companyName}}</li>
+        </ul>
+      
+        </div> 
+        <div class="experiences">
+        <p class="headline">Courses</p>
+            <ul>
+                <li class="jobtitle">{{volunteer.courseTitle}}</li>
+            <li class="Company Name">{{volunteer.courseName}}</li>
+            </ul>
+            
+      </div>
+    <p class="headline">skills</p>
+    <!--  *ngFor="let skill of skills"-->
+    <div class="skills" >
+        <ul><!-- we can use ngfor-->
+            <li class="skill"></li>
+        </ul>
+       
+        </div> 
+    
+</section>
+   <router-outlet></router-outlet>

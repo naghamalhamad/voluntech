@@ -1,0 +1,38 @@
+.searchicon{
+    color:#EAEBED;
+    width:30px;
+}
+.search{
+margin-left: 40px;
+color: #EAEBED;
+width: 700px;
+}
+.example-card{
+width: 270px;
+ margin: 30px;
+}
+.activitiesCard{
+width: 100%;
+}
+.selector{
+    margin: 10px;
+}
+.cityselector,.skillsselector{
+    color:#EAEBED;
+}
+
+.porfileimg{
+    width:80px;
+    border-radius: 100px;
+    margin: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+li{
+    list-style: none;
+} 
+h2{
+    color: #EAEBED;
+}

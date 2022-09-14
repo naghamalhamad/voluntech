@@ -1,0 +1,33 @@
+<h2 class="header">Update Your Information</h2>
+
+<div class="form-container">
+<form [formGroup]="companyForm" (ngSubmit)="update()">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Company Name</mat-label>
+        <input matInput type="text" formControlName="companyName">
+      </mat-form-field>
+    <br>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>About</mat-label>
+        <input matInput type="text" formControlName="about">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Company URL</mat-label>
+        <input matInput type="text" formControlName="url">
+      </mat-form-field>
+
+    <mat-form-field appearance="fill">
+       <mat-label>Choose a type</mat-label>
+       <mat-select type="text" formControlName="type">
+         <mat-option value="NGO"> NGO </mat-option>
+         <mat-option value="Government">Government </mat-option>
+         <mat-option value="Religious">Religious </mat-option>
+       </mat-select>
+     </mat-form-field>
+      <br>
+      <button type="submit" mat-stroked-button>Update</button>
+
+  </form>
+</div>

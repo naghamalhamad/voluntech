@@ -1,0 +1,64 @@
+<h2>all activities</h2>
+<section class="filter">
+ 
+     <mat-form-field class="selector" appearance="fill">
+       <mat-label class="cityselector">City</mat-label>
+        <mat-select>
+         <mat-option>Amman</mat-option>
+         <mat-option>Alzarqaa</mat-option>
+         <mat-option>Irbid</mat-option>
+         <mat-option>Aqaba</mat-option>
+        </mat-select>
+     </mat-form-field>
+     
+     <mat-form-field class="selector" appearance="fill">
+        <mat-label class="cityselector">date</mat-label>
+         <mat-select>
+          <mat-option>today</mat-option>
+          <mat-option>this week</mat-option>
+          <mat-option>this month</mat-option>
+         </mat-select>
+      </mat-form-field>
+
+     <mat-form-field class="selector" appearance="fill">
+        <mat-label class="skillsselector">Skills</mat-label>
+         <mat-select>
+          <mat-option value="HTML">HTML</mat-option>
+          <mat-option value="CSS">CSS</mat-option>
+          <mat-option value="JavaScript">JavaScript</mat-option>
+          <mat-option value="SQL">SQL</mat-option>
+          <mat-option value="JAVA">JAVA</mat-option>
+          <mat-option value="PHP">PHP</mat-option>
+        
+         </mat-select>
+      </mat-form-field>
+
+</section>
+<section class="activitiesCard">
+    <mat-grid-list cols="4" rowHeight="300px" >
+    <mat-grid-tile *ngFor="let Activity of activities" >
+    <mat-card class="example-card"  >
+    <mat-card-content class="content">
+      <div   >
+        <ul>
+        <li>
+         <!--in the all activities page -->
+        <p><strong> {{Activity.activityName}}</strong></p>
+        <p>{{Activity.companyName}}</p> 
+        <p class="type">{{Activity.type}} </p>
+    
+        <p *ngIf="Activity.range" class="city">{{Activity.range.start | date:'yyyy/MM/dd'}}</p>
+        <p *ngIf="Activity.range" class="city">{{Activity.range.end| date:'yyyy/MM/dd'}}</p>
+   </li>
+        </ul>
+      </div>
+  
+   
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="btn" mat-raised-button routerLink="volunteer/{}" target="_blank">Details</button>
+    </mat-card-actions>
+     </mat-card>
+     </mat-grid-tile>
+    </mat-grid-list>
+    </section>

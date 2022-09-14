@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="card" *ngIf="companyprofile.userState$ | async as company">
+      <button (click)="editprofile()" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <mat-icon>edit</mat-icon>
+      </button>
+     <img class="profileimg"
+      [src]="company.photoURL ?? 'assets/images/profileimg.jpg'"
+      alt="profile image">    
+      <span class="companyinfo">
+       <p ><strong>{{company.companyName}}</strong></p>
+       <p >{{company.type}}</p>
+
+      </span>     
+      <div class="icons">
+        <img class="icon"src="assets/images/email.png" alt="email icon">
+        <img class="icon"src="assets/images/linkedin.png" alt="likedin icon">
+        <img class="icon"src="assets/images/web.png" alt="website icon">
+       </div>
+       <div class="aboutsection">
+        <a class="link"(click)="aboutcompany()">About</a>
+        <a class="link" (click)="postedactivities()">posted Activities</a>
+       </div>
+   </div>
+   </div>
+   <section class="about">
+    <p class="aboutp"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</section>

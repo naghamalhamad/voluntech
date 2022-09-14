@@ -1,0 +1,104 @@
+.bar{
+    visibility: hidden;
+}
+.porfilebar{
+  background-color:  #EAEBED;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr,2fr;
+
+}
+.card{
+    padding: 20px;
+    width:20%;
+    height: 525px;
+    background-color:  #EAEBED;
+    display: flex;
+    flex-direction: column;
+}
+.editpageicon{
+  position: absolute;
+  left: 19%;
+  top: 60px;
+  background-color: #42B694;
+
+}
+.profileimg{
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    margin: 80px 80px 10px 80px; 
+}
+.editimgicon{
+  position: absolute;
+  left: 14%;
+  top:37%;
+ 
+
+
+
+}
+
+.volunteerinfo p{
+text-align: center;
+}
+.icons{
+ margin-top: 50px;
+ display: flex;
+ justify-content: center;
+ align-content: flex-end;
+   
+
+}
+.icon{
+    margin: 5px;
+    width: 20px;
+
+}
+
+.aboutsection{
+    position: absolute;
+    left: 25%;
+    top: 100px;
+  
+  }
+  .link{
+  color: #EAEBED;
+  text-decoration: none;
+  margin: 20px;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 200;
+  }
+  a:visited{
+    font-weight: 400;
+
+  }
+  a:hover{
+    color:#42B694;
+  }
+
+  .about{
+    position: absolute;
+    left: 30%;
+    top: 170px;
+    width: 60%;
+    color:#EAEBED;
+  
+  }
+  .headline{
+      font-size: 16px;
+      margin-top: 25px;
+  }
+  .experiences{
+   margin: 20px;
+  
+  }
+  ul{
+      width: 25%;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      
+  }

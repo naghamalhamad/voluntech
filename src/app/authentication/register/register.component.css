@@ -1,0 +1,43 @@
+
+.grid{
+    display:grid;
+    grid-template-columns: 2fr,1fr;
+   
+}
+.volunteer{
+   grid-column:1/2 ;
+   justify-content: end;
+   margin-left: 45%;
+  
+   
+}
+.company{
+    grid-column:2/3 ;
+    justify-content: center;
+    
+}
+
+img{
+    height: 250px;
+
+
+}
+.volunteerimg{
+    width: 200px;
+    margin-bottom: 40px;
+    margin: 20px;
+}
+.companyimg{
+    width: 200px;
+    margin-left: 47px;
+    margin-top: 7%;
+
+}
+
+.title{
+    font-size: 18px;
+    color: #EAEBED;
+    margin-left: 19%;
+    text-decoration: none;
+ 
+}
